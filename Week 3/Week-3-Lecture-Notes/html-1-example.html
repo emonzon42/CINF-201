@@ -1,0 +1,45 @@
+<!doctype html> <!-- This is a required tag and is used to state that this is an HTML5 document. -->
+<html lang="en"> <!-- This is the tag that marks the beginning of our HTML document. The lang attribute helps browsers know what language it should be in.  --> 
+
+<head> <!-- This tag is usually filled with information about the document. We can link to styles here as well. -->
+    <meta charset="utf-8"> <!-- What charset we are using for our document. -->
+    <title>HTML 1 Example</title> <!-- This is a required tag as well and contains the title which appears in the browser tab. -->
+    <!-- Underneath this is a style tag. It's used for adding CSS styles to our page. I'm using it here to style the tables so you can see them a little better. If you delete the styles, the table's appearance will change. -->
+    <style> 
+    table, tr, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+    </style>
+</head>
+
+<body> <!-- This is the start of the body...things between these tags (except for comments) will display on our page. -->
+      
+    <h1>Heading Tag</h1>
+    <p>The above is a heading tag and they range from h1 to h6. H1 is the most important in terms of document hierarchy and appears the largest on the page. H2 and below are typically used as subheadings. This sentence is inside of a p tag which is used for displaying paragraphs.</p>
+    <p>Beneath this paragraph is an unordered list of my favorite animals. Unordered lists use ul and li tags. Lists can also be created with ol (ordered lists) and dl (definition list) tags.</p>
+    <ul>
+        <li>Cheetahs</li>
+        <li>Pandas</li>
+        <li>Dogs in general</li>
+    </ul>
+    
+    <p>Below is a basic table that contains three columns and two rows. By default, tables don't have any styles and so the content will look a little squished as it would appear here if you deleted the style tags above. Each row requires a tr tag while each column requires td tags. Td tags always go inside of tr tags. If you're using table headings, you would use th tags instead of td tags and these would go in the first tr tags for the table.</p>
+    <table>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 3, Cell 3</td>
+        </tr>
+    </table>
+    
+    
+</body>
+
+</html>
