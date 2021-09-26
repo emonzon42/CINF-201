@@ -6,9 +6,8 @@
 .vscode
 
 #Unneccessary
-/Week 1
-/Week 2
-
+*.psd
+*.zip
 
 #Alias folder
 _back
