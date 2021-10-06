@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Example</title>
+    <link rel="stylesheet" href="css/box-model-float-example.css">
+    <style>
+        .blueDiv {
+            width: 200px;
+            height: 200px;
+            background: blue;
+            border: 2px dashed black;
+        }
+    </style>
+</head>
+    <body>
+        <h1>CSS Selectors, Box Model, &amp; Float Examples</h1>
+        <p>The examples below are brief but will provide a glimpse into each concept. Make sure to inspect the code or view the source. There are comments in the HTML and CSS for guidance. The space on the outside edges of the page is the default margin for the body tag.</p>
+        
+        <hr>
+        
+        <h2>CSS Styling Types</h2>
+        <p>For most of the examples below, my CSS will be externally placed in a separate stylesheet (style.css). However, for the two divs (blue box/red box) below, I will use internal and inline CSS. The styles for the blue box are located in the style tags inside of the head of our HTML document. The styles for the red box are in the same line as the div. View the page source to see them in action.</p>
+        
+        <div class="blueDiv"></div>
+        <div style="width: 200px; height: 200px; background: red; border: 2px dotted black;"></div>
+        
+        <h2>CSS Selectors</h2>
+        <p>In the example below, I use a comma to target the p and span tags to make the font color red and provide a border.</p>
+        <div class="selector-example">
+            <p>This is in a p tag.</p>
+            <span>This is in a span tag.</span>
+        </div>
+        
+        <p>In this example, I use the "+" operator to target all paragraphs that immediately following another paragraph. </p>
+        <div class="selector-example2">
+            <p>This content is in a p tag.</p>
+            <p>This content is in a p tag. Since it follows another p tag immediately, it will get blue font and a border.</p>
+        </div>
+        
+        <p>In this example, I use the "~" operator to target all spans that have a paragraph immediately before them.</p>
+        <div class="selector-example3">
+            <p>This content is in a p tag.</p>
+            <span>This content is in a span tag. Since this span tag has a p tag immediately before it, it will get green font and a border.</span>
+            <p>This content is in a p tag.</p>
+        </div>
+        
+        <h2>Box Model</h2>
+        <p>The Box Model is comprised of <b>three</b> main properties which are Padding, Border, and Margin. Content is also included but these three properties are what we will mainly use to affect the spacing of our content. Padding wraps around our content, border wraps around our padding, and finally, the margin wraps around all of it and serves as the buffer between content.</p>
+        <p>In the example below, I have added a 1px border to our paragraphs. The margin is still present but notice that vertical margins collapse into each other. Instead of there being 32px of margin between paragraphs, it is collapsed into 16px total.</p>
+        <div class="border-example">
+            <p>This is a sentence.</p>
+            <p>This is a sentence.</p>
+            <p>This is a sentence.</p>
+            <p>This is a sentence.</p>
+        </div>
+        
+        <p>In this example, I have added 10px of padding to all sides of our paragraphs. You can now see that there is space between the content and the border. The margins are all still present and collapse vertically.</p>
+        <div class="padding-example">
+            <p>This is a sentence.</p>
+            <p>This is a sentence.</p>
+            <p>This is a sentence.</p>
+            <p>This is a sentence.</p>
+        </div>
+        
+        <p>In this example, the margin has been removed and only the border remains. Since the margin is 0, all of the content is placed directly together. </p>
+        <div class="margin-example">
+            <p>This is a sentence.</p>
+            <p>This is a sentence.</p>
+            <p>This is a sentence.</p>
+            <p>This is a sentence.</p>
+        </div>
+        
+        <h2>Floats</h2>
+        <p>Floats allow us to take content out of the normal flow of the page and place them on the left or right side of their containers. This enables text and inline elements to wrap around them. In the examples below, I wrap each set of floated items in a div with a class called "row". This allows me to "clear" our floats. When you don't clear floats, other elements on your page will try to take up available space and unintended behaviors may arise. I would recommend using the .row declarations (especially the before and after parts) for all class assignments moving forward. It will make it easier for you to separate content and keep the page behavior normal. For more info on clearing floats, read this <a href="https://css-tricks.com/the-how-and-why-of-clearing-floats/" target="_blank">article on floats by Chris Coyier</a>.</p>
+        <div class="row">
+            <p>The wrapping div will take up the whole width of the screen</p>
+        </div>
+        <div class="row">
+            <p class="two">This paragraph will use 50% of the width of this row.</p>
+            <p class="two">This paragraph will also use 50% of the width in this row.</p>
+        </div>
+        <div class="row">
+            <p class="three">This paragraph is one-third of the row width.</p>
+            <p class="three">Also one-third. </p>
+            <p class="three">One-third yet again by declaring width: 33%</p>
+        </div>
+        
+    </body>
+</html>

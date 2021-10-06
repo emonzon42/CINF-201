@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+.row {
+    width: 100%;
+}
+.row::before, 
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/* We can target a single element by naming it specifically */
+h1 {
+    text-align: center;
+}
+/* We can target multiple elements by using a comma to separate our targets. In this example, we are targetting different classes. */
+.selector-example, .selector-example2, .selector-example3 {
+    background: black;
+    color: white;
+    padding: 20px;
+}
+.selector-example p, .selector-example span {
+    color: red;
+    border: 1px solid white;
+}
+/* The "+" operator allows us to target elements that are placed immediately after each other.
+In this case, we are targeting all paragraphs that immediately follow other paragraphs. */
+.selector-example2 p + p {
+    color: #8A8AFF;
+    border: 1px solid white;
+}
+/* The "~" operator allows us to target elements that are preceded by another element.
+In this case, we are targeting all spans that have a paragraph immediately before them */
+.selector-example3 p~span {
+    color: #00FF00;
+    border: 1px solid white;
+}
+.border-example p {
+    border: 1px solid black;
+}
+.padding-example p {
+    border: 1px solid black;
+    padding: 10px;
+}
+.margin-example p {
+    border: 1px solid black;
+    margin: 0;
+}
+/* Floating is as simple as saying float: direction; and then providing a width. */
+/* Keep in mind that you have to clear your floats. */
+/* The row::before and ::after declarations are a classic way to clear floats */
+.two {
+    float: left;
+    width: 50%;
+    border: 1px solid black;
+}
+.three {
+    float: left;
+    width: 33.33%;
+    border: 1px solid black;
+}
