@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+.row {
+    width: 100%;
+}
+.row::before, 
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* 
+    Place your CSS after this line. The above lines are
+    so that you don't have to calculate the width of elements
+    using content width, padding, border, and margin. Instead,
+    you only have to think of the margin/width you provide. The
+    padding/border are automatically included in the width calculations.
+
+    The .row styles are if you want to use floats in your CSS.
+    Each row has the before/after psuedo elements cleared. If you 
+    keep floated content in divs with a class of row, they will stay
+    in their containers without moving around the page. You can delete
+    these styles if you want but they are intended to make things easier.
+*/

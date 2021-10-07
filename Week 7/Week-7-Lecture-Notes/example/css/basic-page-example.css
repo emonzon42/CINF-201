@@ -1,0 +1,168 @@
+/* General Styles */
+/*
+    The asterisk selects every element on our page.
+    We use box-sizing: border-box so that we don't
+    have to include the padding/border in our width 
+    calculations. Now we can just worry about the width
+    of our content and the margins to figure out how
+    much space to give everything. 
+*/
+* {
+    box-sizing: border-box;
+}
+/* 
+    I wrap all of my main rows of content in divs with 
+    a class of "row". I can then target the before and 
+    after pseudo class and "clear" the content before
+    and after my div. This allows me to float elements
+    inside of my row classes and I won't have to worry 
+    about them moving around the page unexpectedly. 
+    Delete the .row:after, .row:before declaration
+    and you'll see items move around the page.
+*/
+.row {
+    width:100%;
+}
+.row:after,
+.row:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* 
+    Because we have a fixed navigation menu, I give the 
+    body a top margin of 3em, a left/right margin of 0,
+    and a bottom margin of 0. If you remove the top part
+    of the margin (set it to 0), the fixed navigation menu
+    will overlap the top of our content.
+*/
+body {
+    margin: 3em 0 0;
+}
+/*
+    We can center block level elements by using margin: 0 auto;
+    This sets the top/bottom margin to 0 and it automatically
+    figures out the margins on the left/right of our container
+    based on the width of the screen. This doesn't work for inline
+    elements because they don't have a specific width. If you use
+    display: block; and margin: 0 auto; on an inline element, you
+    can achieve the same results.
+
+    It's good to bump up your line height to 1.3 or so because it
+    increases the readability of your text. The max-width is used
+    here to prevent our content from becoming wider than a certain width.
+*/
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    line-height: 1.4;
+}
+
+/* 
+    Header Styles 
+    Setting the position to fixed keeps your container in place. 
+    However, you then have to use top, right, bottom, left to 
+    position the content. The upperleft corner is the beginning 
+    coordinate for the page (0, 0). I say top: 0 here to keep our
+    header at the very top of our page.
+*/
+.header {
+    background: black;
+    position: fixed;
+    top: 0;
+}
+/*
+    I float the a tags to the left to display them differently. 
+    Since they each have a width of 25%, they will take up 1/4 
+    of the container they are in. I also center align the text
+    and give them a padding of 1em. Since the text size is 1em
+    by default, adding 1em of padding to all sides means that the
+    height of the container will be 3em (1em for text, 1em for top,
+    1em for the bottom) Header tags do not have a height be default.
+    This is why I add 3em of margin to the top of the body. 
+
+*/
+.header a {
+    float: left;
+    color: white;
+    text-decoration: none;
+    width: 25%;
+    text-align: center;
+    padding: 1em;
+}
+/* 
+    We can use a pseudo selector to target elements in different ways
+    such as when they have focus, when they are hovered over, or even
+    when they are the odd or even child in a container. When the a tags
+    in the header are hovered over, we add an underline to them.
+*/
+.header a:hover { 
+    text-decoration: underline;
+}
+
+/* 
+    Aside Styles 
+    The aside div takes up 30% currently. As you'll see later, the 
+    main div content will have a width of 65% and a margin of 5%
+    to its left. This adds up to 100% in total. When you float content,
+    it's a good idea to make sure the containers add up to 100% with margin.
+*/
+.aside {
+    float: left;
+    width: 30%;
+}
+.aside h3 {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 5px;
+}
+/* 
+    As mentioned before, you can't center align inline elements with
+    margin: 0 auto;. You need to use change the display to block and then 
+    use margin: 0 auto. border-radius makes the edges of containers more
+    round. By setting it to 50%, we can make our image a circle.
+*/
+.aside img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.aside .contact h3 {
+    margin: 0; /* Remove margin completely from our h3 so we can have it against our border. */
+}
+.aside form {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 1em;
+}
+.aside label, .aside input, .aside textarea {
+    display: block;
+    width: 100%;
+}
+.aside input, .aside textarea {
+    margin-bottom: 10px; /* add bottom margin to space out our form elements */
+}
+
+/* Main Styles */
+.main {
+    float: left;
+    width: 65%;
+    margin-left: 5%;
+}
+.main .row {
+    padding: 15px;
+    background: black;
+    color: white;
+}
+.main .row img {
+    float: left;
+    margin-right: 15px;
+}
+
+/* Footer Styles */
+.footer {
+    background: black;
+    text-align: center;
+    color: white;
+}
