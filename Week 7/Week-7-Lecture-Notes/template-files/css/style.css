@@ -10,3 +10,51 @@
     display: table;
     clear: both;
 }
+.redPara {
+    color: red;
+    background: black;
+    border: 1px solid black;
+}
+
+.center{
+    text-align: center;
+}
+
+.redPara span{
+    text-size-adjust: 50px;
+}
+
+body p:hover{
+    text-align: left;
+    border: 1px solid rgb(255, 1, 1);
+    width: 50%;
+    margin: 0 auto;
+}
+body p, a{
+    border: 1px solid black;
+    width: 23%;
+    margin: 0 auto;
+}
+
+h1{
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 50px;
+
+}
+
+div p{
+    float: left;
+    width: 50%;
+
+}
+
+.two p{
+    float: left;
+    width: 50%;
+}
+
+.three p{
+    float: left;
+    width: 33%;
+}
