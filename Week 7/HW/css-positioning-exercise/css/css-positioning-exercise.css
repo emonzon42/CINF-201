@@ -23,3 +23,96 @@
     in their containers without moving around the page. You can delete
     these styles if you want but they are intended to make things easier.
 */
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+body{
+    background: navy;
+}
+
+.header{
+    float: left;
+    background-color: red;
+    color: aliceblue;
+    text-align: left;
+    padding: 2%;
+    
+}
+
+.header a{
+    color: aliceblue;
+}
+
+.header h1{
+    float : left;
+    padding-right: 50px;
+}
+
+.nav{
+    background-color:	Lightgreen;
+    padding: 15px;
+    font-family: verdana;
+}
+
+.nav li{
+    float:left;
+    display: inline;
+    margin-right: 15px;
+}
+
+.nav a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav ul{
+    padding: 0;
+}
+
+
+.content{
+    float:left;
+    background-color: #ccc;
+    width: 75%;
+    padding: 10px;
+    
+}
+
+.content li{
+    text-align: center;
+    font-family: Lucida;
+    float:left;
+    display:inline;
+    font-size: large;
+}
+
+.sidebar{
+    float:left;
+    width: 25%;
+    background: white;
+    padding: 20px;
+}
+.sidebar p{
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 1em;
+
+}
+
+
+.footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
