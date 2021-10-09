@@ -1,0 +1,9 @@
+changes to apple page
+- margins
+- padding
+- changed background colors 
+- added a style for "a" (changed color)
+- set line-height to 0
+- changed h2 font to comic sans
+- lowered font-weight of headings
+- made body background color black
