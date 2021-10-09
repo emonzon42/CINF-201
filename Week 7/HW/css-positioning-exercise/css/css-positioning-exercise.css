@@ -78,8 +78,13 @@ body{
     float:left;
     background-color: #ccc;
     width: 75%;
-    padding: 10px;
+    padding: 15px;
     
+}
+
+.content p{
+    font-size: medium;
+    font-family: verdana;
 }
 
 .content li{
@@ -87,7 +92,8 @@ body{
     font-family: Lucida;
     float:left;
     display:inline;
-    font-size: large;
+    font-size: larger;
+    width: 100%;
 }
 
 .sidebar{
@@ -97,9 +103,12 @@ body{
     padding: 20px;
 }
 .sidebar p{
+    text-align: center;
     margin: 0 auto;
-    border: 2px solid black;
     padding: 10px;
+    width: 100%;
+    border: 2px solid black;
+    border-bottom: 0px;
 }
 
 img{
@@ -107,7 +116,7 @@ img{
     margin: 0 auto;
     border: 2px solid black;
     padding: 1em;
-
+    width: 100%;
 }
 
 
