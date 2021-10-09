@@ -8,6 +8,8 @@
 #Unneccessary
 *.psd
 *.zip
+*.rtf
 
 #Alias folder
 _back
+_code
