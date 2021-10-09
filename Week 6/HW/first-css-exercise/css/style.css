@@ -27,13 +27,14 @@ div {
    background-color: #ccc;
 }
 
-.firstDiv h2, span{
+.firstDiv h2{
     color: blue;
 }
 
 .firstDiv span{
     background-color: white;
     border: 1px solid blue;
+    color: blue;
 }
 
 .firstDiv ul{
