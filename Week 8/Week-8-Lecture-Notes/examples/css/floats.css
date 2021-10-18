@@ -1,0 +1,56 @@
+ * {
+     box-sizing: border-box;
+ }
+/* Clearfix code */
+.row {
+    width: 100%;
+}
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* End Clearfix code */
+
+.one-third-column {
+    float: left;
+    width: 30%;
+    margin: 0 1.66%;
+    padding: 10px;
+    text-align: center;
+    background: black;
+    color: white;
+}
+.row:nth-of-type(2) {
+    background: black;
+    padding: 1em;
+    color: white;
+}
+img {
+    float: left;
+    margin-right: 1em;
+}
+.secondEx .row {
+    background: black;
+    color: white;
+    padding: 1em;
+}
+.aside {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+}
+.main {
+    float: left;
+    width: 65%;
+}
+.one-half-column {
+    float: left;
+    width: 45%;
+    margin: 2.5%;
+    background: black;
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+}

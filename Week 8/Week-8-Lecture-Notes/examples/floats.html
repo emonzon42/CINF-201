@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Basic Float Example</title>
+    <link rel="stylesheet" href="css/floats.css">
+</head>
+
+<body>
+    <h1>Basic Float Example</h1>
+    <p>On this page, I have created a few multi-column layouts which utilize the float property. To do this, I targeted the row containers and their before/after pseudo-classes. I then floated the child divs to the left and gave them a width/margin.</p>
+    <p>For any number of columns, you would take 100 and divide it by that number. If I want a 4 column layout, 100/4 would be 25%. This means I need at least 25% space for each set of columns. You could do something like give each column a width of 20% with 2.5% margins on each column (20 + (2.5*2) = 25). </p>
+
+    <p>In this example, I've created a 3-column layout with one row wrapper and three divs inside of it. I used 30% for the width and 1.66% for the margins on each side of the divs.</p>
+    <div class="row">
+        <div class="one-third-column">
+            <p>Cool Content</p>
+        </div>
+        <div class="one-third-column">
+            <p>Cool Content</p>
+        </div>
+        <div class="one-third-column">
+            <p>Cool Content</p>
+        </div>
+    </div>
+    <hr>
+    <p>In this example, I've floated an image and added margin to the right of it to give it some space. </p>
+    <div class="row">
+        <img src="https://via.placeholder.com/150x150" alt="dummy image from placeholder.com">
+        <p>The image to the left of this paragraph has been floated. Since it's floated, the text here will flow around it. Being that this content is in a div with a class of "row", it won't move up or down. I've added margin to the right of the image to give it space from the text. This div has been given padding to allow there to be space between the content and the edge of our container.</p>
+    </div>
+
+    <hr>
+    <p>In the example below, I used nested multi-column layouts with floats. Each time I want content displayed side by side, I wrap that content in a container with a class of "row." I then float the containers inside of that row and give them a width and margins.</p>
+    <div class="row">
+        <div class="aside">
+            <h3>Some Aside Content</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales erat nulla, hendrerit ultrices lectus ornare vel. Quisque nec vestibulum sapien. Donec sit amet facilisis nulla. Maecenas malesuada pulvinar nibh ut semper. Curabitur vitae volutpat eros. Sed faucibus tempus mauris, quis lobortis elit tincidunt nec. Nam facilisis augue sit amet placerat dignissim. Curabitur in lacus et arcu aliquam consequat egestas a velit.</p>
+        </div>
+        <div class="main">
+            <h3>Some Main Content</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales erat nulla, hendrerit ultrices lectus ornare vel. Quisque nec vestibulum sapien. Donec sit amet facilisis nulla. Maecenas malesuada pulvinar nibh ut semper. Curabitur vitae volutpat eros. Sed faucibus tempus mauris, quis lobortis elit tincidunt nec. Nam facilisis augue sit amet placerat dignissim. Curabitur in lacus et arcu aliquam consequat egestas a velit.</p>
+            <div class="row">
+                <div class="one-half-column">
+                    <h3>Smaller Content</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales erat nulla, hendrerit ultrices lectus ornare vel. Quisque nec vestibulum sapien. Donec sit amet facilisis nulla. Maecenas malesuada pulvinar nibh ut semper. Curabitur vitae volutpat eros. Sed faucibus tempus mauris, quis lobortis elit tincidunt nec. Nam facilisis augue sit amet placerat dignissim. Curabitur in lacus et arcu aliquam consequat egestas a velit.</p>
+                </div>
+                <div class="one-half-column">
+                    <h3>Smaller Content</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales erat nulla, hendrerit ultrices lectus ornare vel. Quisque nec vestibulum sapien. Donec sit amet facilisis nulla. Maecenas malesuada pulvinar nibh ut semper. Curabitur vitae volutpat eros. Sed faucibus tempus mauris, quis lobortis elit tincidunt nec. Nam facilisis augue sit amet placerat dignissim. Curabitur in lacus et arcu aliquam consequat egestas a velit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

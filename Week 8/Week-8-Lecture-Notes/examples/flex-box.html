@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Basic Flexbox Example</title>
+    <link rel="stylesheet" href="css/flex-box.css">
+</head>
+
+<body>
+    <h1>Basic Flexbox Example</h1>
+    <p>On this page, I have created a few multi-column layouts which utilize the flexbox property. To do this, I give the parent container (row) a display of flex. I can then use margins/width on each of the children containers to style the as I'd like. The content here is structured similarly to what you'll find in the <a href="floats.html" target="_blank">Floats Example</a> page.</p>
+    <p>For any number of columns, you would take 100 and divide it by that number. If I want a 4 column layout, 100/4 would be 25%. This means I need at least 25% space for each set of columns. You could do something like give each column a width of 20% with 2.5% margins on each column (20 + (2.5*2) = 25). </p>
+
+    <p>In this example, I've created a 3-column layout with one flex wrapper and three divs inside of it. I used 30% for the width and 1.66% for the margins on each side of the divs.</p>
+    <div class="flex">
+        <div class="one-third-column">
+            <p>Cool Content</p>
+        </div>
+        <div class="one-third-column">
+            <p>Cool Content</p>
+        </div>
+        <div class="one-third-column">
+            <p>Cool Content</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="secondEx">
+        <p>In this example, I've used display flex on the container below. This allows me to just focus on adding margin/padding for the content in the container to space them out. </p>
+        <div class="flex">
+            <img src="https://via.placeholder.com/150x150" alt="dummy image from placeholder.com">
+            <p>The image in this example hasn't been floated. Instead, I gave the parent container (flex) a display of flex. That makes it so the image and p tags are placed horizontally. From there, we can add margins and padding to give it the same spacing as in the floats page. </p>
+        </div>
+    </div>
+    <hr>
+    <p>In the example below, I used nested multi-column layouts with flexbox. Each time I want content displayed side by side, I wrap it in a container with a class of "flex" and then give that container a display of flex. </p>
+    <div class="flex">
+        <div class="aside">
+            <h3>Some Aside Content</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales erat nulla, hendrerit ultrices lectus ornare vel. Quisque nec vestibulum sapien. Donec sit amet facilisis nulla. Maecenas malesuada pulvinar nibh ut semper. Curabitur vitae volutpat eros. Sed faucibus tempus mauris, quis lobortis elit tincidunt nec. Nam facilisis augue sit amet placerat dignissim. Curabitur in lacus et arcu aliquam consequat egestas a velit.</p>
+        </div>
+        <div class="main">
+            <h3>Some Main Content</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales erat nulla, hendrerit ultrices lectus ornare vel. Quisque nec vestibulum sapien. Donec sit amet facilisis nulla. Maecenas malesuada pulvinar nibh ut semper. Curabitur vitae volutpat eros. Sed faucibus tempus mauris, quis lobortis elit tincidunt nec. Nam facilisis augue sit amet placerat dignissim. Curabitur in lacus et arcu aliquam consequat egestas a velit.</p>
+            <div class="flex">
+                <div class="one-half-column">
+                    <h3>Smaller Content</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales erat nulla, hendrerit ultrices lectus ornare vel. Quisque nec vestibulum sapien. Donec sit amet facilisis nulla. Maecenas malesuada pulvinar nibh ut semper. Curabitur vitae volutpat eros. Sed faucibus tempus mauris, quis lobortis elit tincidunt nec. Nam facilisis augue sit amet placerat dignissim. Curabitur in lacus et arcu aliquam consequat egestas a velit.</p>
+                </div>
+                <div class="one-half-column">
+                    <h3>Smaller Content</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales erat nulla, hendrerit ultrices lectus ornare vel. Quisque nec vestibulum sapien. Donec sit amet facilisis nulla. Maecenas malesuada pulvinar nibh ut semper. Curabitur vitae volutpat eros. Sed faucibus tempus mauris, quis lobortis elit tincidunt nec. Nam facilisis augue sit amet placerat dignissim. Curabitur in lacus et arcu aliquam consequat egestas a velit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

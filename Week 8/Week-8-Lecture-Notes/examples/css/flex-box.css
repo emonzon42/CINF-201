@@ -1,0 +1,38 @@
+ * {
+     box-sizing: border-box;
+ }
+.flex {
+    display: flex;
+    width: 100%;
+}
+.one-third-column {
+    width: 30%;
+    margin: 0 1.66%;
+    padding: 10px;
+    text-align: center;
+    background: black;
+    color: white;
+}
+img {
+    margin-right: 1em;
+}
+.secondEx .flex {
+    background: black;
+    color: white;
+    padding: 1em;
+}
+.aside {
+    width: 30%;
+    margin-right: 5%;
+}
+.main {
+    width: 65%;
+}
+.main .one-half-column {
+    width: 45%;
+    margin: 2.5%;
+    background: black;
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+}
