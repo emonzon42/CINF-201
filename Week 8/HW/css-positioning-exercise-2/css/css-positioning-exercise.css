@@ -31,11 +31,11 @@
     flex-direction: row;
     padding: .5em;
     margin-left: 1em;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .header h2{
-    justify-content: flex-start;
+    width: 50%;
 }
 
 .header a{
@@ -44,17 +44,40 @@
 }
 
 .header ul{
-    float: left;
-    margin-left: 5em;
+    
     display: flex;
-    font-size: larger;
-    flex-direction: row;
-    justify-content: flex-end;
+    font-size: x-large;
+    /*justify-content: flex-end;*/
     list-style-type: none;
+    width: 50%;
     
 }
 
 .header li{
-    margin: .5em;
-    padding: .5em;
+    padding: .3em;
+}
+
+.main{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.two{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.two img{
+    align-content: flex-start;
+    width: fit-content;
+}
+
+.two h2{
+    align-content: flex-end;
+}
+
+.two p{
+    
 }
