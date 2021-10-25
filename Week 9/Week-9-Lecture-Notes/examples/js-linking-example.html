@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS Linking Example</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto 2em;;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>How to Link JS to your Page</h1>
+    <p>This page demonstrates how to link JavaScript to your HTML. To view the code, right-click the page and select "View Page Source." The JS will be located in a few places. One place is in the opening tag of the first button as an attribute. Another place will be inside of the first set of &lt;script&gt;&lt;/script&gt; tags. It will also be inside of an external JS file which can be found by clicking the src attribute value linked in the script tag just before the closing body tag. JavaScript can be linked in one of three ways:</p>
+    <ol>
+        <li>Inline</li>
+        <li>Internally</li>
+        <li>Externally</li>
+    </ol>
+    
+    <!-- Inline JavaScript Example -->
+    <h2>Inline Linking</h2>
+    <p>Inline JavaScript is done by placing the event handler (trigger) inside the HTML tag as an attribute. The button below has an onclick attribute which I use to trigger an alert function. The button is the <strong>object</strong>, onclick is the <strong>event</strong>, and alert is the <strong>function</strong> which we trigger. Click it to test it out. </p>
+    <button onclick="alert('You clicked the button for the inline link example.');">Click Me</button>
+    
+    <!-- Internal JavaScript Example -->
+    <h2>Internal Linking</h2>
+    <p>Linking JavaScript internally requires the usage of &lt;script&gt;&lt;/script&gt; tags in your HTML document. Since the JavaScript isn't directly attached to the HTML tag through an attribute, we must link to it some other way. One popular method is to use document.getElementById().</p>
+    
+    <p>The document object has a few functions or methods that can be used to search through the HTML for an element. getElementById is one such method and it requires the id of an element on the page. Whatever id we provide for the getElementById function must match the id of some element on the page, or the function will not work. </p>
+    
+    <button id="internalButton">Click Me</button>
+    <script>
+        document.getElementById("internalButton").onclick = function() {
+            alert("This time, you clicked the button for the internal link example.");
+        }
+    </script>
+    
+    <!-- External JavaScript Example -->
+    <h2>External Linking (Best Practice)</h2>
+    <p>Linking JavaScript externally also requires the usage of &lt;script&gt;&lt;/script&gt; tags in your HTML document. However, you don't place any JS between the tags. Instead, you add a src attribute to the opening tag and then provide the path to your JS file.</p>
+    <p>If it's in the same folder, you simply name the file with a .js extension. However, if it's in some other folder, you need to name that folder and follow it by a forward slash ("/") and then the file name. In my example below, I have placed my JavaScript file inside of a "js" folder. When you inspect the code on this page, you'll see that my src attribute value is "js/js-linking-example.js". </p>
+    <button id="externalButton">Click Me</button>
+    <script src="js/js-linking-example.js"></script>
+</body>
+
+</html>
