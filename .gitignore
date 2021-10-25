@@ -9,6 +9,7 @@
 *.psd
 *.zip
 *.rtf
+*.docx
 
 #Alias folder
 _back
