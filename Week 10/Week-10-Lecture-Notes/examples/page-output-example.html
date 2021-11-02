@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Creating Page Output</title>
+</head>
+    <body>
+        <h1>Creating Page Output</h1>
+        <p>On this page, there are a few examples which demonstrate how to use JS to add some basic interactivity to your page. Some of the examples will create items on the page while others will alter already existing items. The code for each example is located in the script tags directly the HTML for that example. This is an example of internally placed JS. To view this code, right-click the page and select "View Source." There are accompanying comments to help explain what's happening in the code.</p>
+        <hr>
+        
+        <h2>Adding Text to the Page</h2>
+        <p>In this example, we will use the click of a button to add a paragraph tag to an empty div. When you click the button below, a paragraph will appear on the page. </p>
+        <p>To add HTML to a page, you need to use the "innerHTML" property on an element. For our code below, we use innerHTML on the div with an id of "emptyDiv." When you use innerHTML, you can place HTML tags inside of the quotation marks and it will display on the page as HTML.</p>
+        <button id="addParagraph" type="submit">Add a Paragraph</button>
+        <div id="emptyDiv"></div>
+        <script>
+            /* In this example, we assign our button to a variable. After this, we add an onclick event to it (.onclick = function() {})
+            When the button is clicked, the code inside of the curly braces will get executed. 
+            What I do is target the emptyDiv container and use the innerHTML property to change the HTML inside of it.
+            When you use innerHTML, anything inside of the container you're targetting gets replaced entirely. 
+            If you wanted to keep what was inside of the element, you would need to use ".innerHTML +=" 
+            "+=" is like saying this thing equals itself plus this other item. 
+            */
+            var addParaButton = document.getElementById("addParagraph");
+            addParaButton.onclick = function () {
+                document.getElementById("emptyDiv").innerHTML = "<p>You've created a paragraph!</p>";
+            }
+            /*
+            We could have also used the following code: 
+            
+            document.getElementById("addParagraph").onclick = function() {
+                
+            }
+            
+            The difference is that we don't create a variable with the button and add the onclick event directly to it. This is what we will do for examples moving forward.
+            */
+        </script>
+        <hr>
+        
+        <h2>Altering the Styles of an Element (First Example)</h2>
+        <p>In this first example, we will use a button click to hide a paragraph. To do this we will target the paragraph's "style" property and use it to change the display to "none."</p>
+        <p id="hideMe">This paragraph will be hidden.</p>
+        <button id="hidePara" type="submit">Hide the Paragraph</button>
+        <script>
+            document.getElementById("hidePara").onclick = function () {
+                document.getElementById("hideMe").style.display = "none";
+            }
+            /*
+              To change the style of an element, you need to target the element and then use the style property. However, you must pair the style property with a CSS property as well and then give it a value. In the above example, we use the style.display property and we set it to none to hide our paragraph. However, you could use others such as width, height, color, backgroundColor, etc.   
+            */
+        </script>
+        
+        <hr>
+        <h2>Altering the Styles of an Element (Second Example)</h2>
+        <p>In this second example, we will use a button click to change multiple styles of an element at the same time (background color and text color of a paragraph). Like we did in the first example, we will attach an onclick event to the button.</p>
+        <p>Once the button is clicked, we will target the paragraph below by its id value and then alter its CSS styles. The difference in this example is that we are using the setAttribute method. With setAttribute, we can set any attribute (id, class, href, style, etc.) and in this instance, we are using it to set the CSS styles inline.</p>
+        <p id="redPara">This paragraph will become red with white text.</p>
+        <button id="changeParaColors" type="submit">Change the Paragraph Colors</button>
+        <script>
+            document.getElementById("changeParaColors").onclick = function () {
+                document.getElementById("redPara").setAttribute("style", "background: red; color: white;");
+            }
+            /* 
+                In this example, we are also changing the styles but we do so with the setAttribute method. This can be used to add any attribute to an HTML element. However, we are using it to set the value of the style attribute. The setAttribute function takes two parameters/arguments: the attribute you want to set, and the value you are providing it. We set the style attribute equal to "background: red; color: white;" to alter the styles of our paragraph.
+            */
+        </script>
+        
+        <hr>
+        
+        <h2>Getting User Input and Using it</h2>
+        <p>In this last example, we are going to use a form with inputs and a button to allow a user to submit their first and last name. After they submit their name, an alert will appear on the page and their name will be output on the page in a paragraph as well. You should always use labels in your forms for accessibility purposes. The for attribute value in the label tag <strong>must</strong> match the id attribute value in the input tag used.</p>
+        
+        <p>For most examples, we have set the type attribute for each button to "submit." However, for this example, we use a value of "button" because the page will refresh after we submit our inputs. Once the inputs are submitted, the alert would appear along with the text but it would disappear shortly after. The button attribute value allows our content to stay on the page.</p>
+        
+        <form>
+            <label for="firstName">First Name:</label>
+            <input id="firstName" type="text"><br>
+            
+            <label for="lastName">Last Name:</label>
+            <input id="lastName" type="text"><br>
+            
+            <button type="button" id="submitName">Submit Your Name</button>
+        </form>
+        
+        <p id="nameOutput">Your name is going to be output after this sentence. </p>
+        <script>
+            document.getElementById("submitName").onclick = function() {
+                var firstName = document.getElementById("firstName").value;
+                var lastName = document.getElementById("lastName").value;
+                
+                alert("Your name is " + firstName + " " + lastName + " and that's a cool name!");
+                document.getElementById("nameOutput").innerHTML += "Your name is " + firstName + " " + lastName + " and that's a cool name!";
+            }
+            
+            /* 
+                To get the value from an input tag, you need to target it with document.getElementById() and then use the "value" property on it like above. You have to get the value AFTER the button is clicked because otherwise, the value would always be an empty string or whatever placeholder text was being used in the input. 
+                
+                After we get the value, we can do whatever we want with it. In this example, we use string concatenation with the plus sign to add our variables and strings together. We then use innerHTML with "+=" so that we don't erase the content inside of the paragraph with an id of "nameOutput." If you remove that + sign after .innerHTML, the text would be replaced every time. 
+            */
+        </script>
+        
+        
+        
+        
+        
+    </body>
+</html>
