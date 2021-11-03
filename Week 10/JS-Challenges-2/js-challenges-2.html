@@ -34,7 +34,7 @@
             <label for="height">Height: </label><input type="text" id="height">
             <label for="width">Width: </label><input type="text" id="width">
             <label for="color">Color: </label><input type="text" id="color">
-            <button id="boxSubmit" type="button">Submit Box Info</button>
+            <button id="boxSubmit" type="button" onclick="bsubmit()" onsubmit="return false">Submit Box Info</button>
         </form>
         <div id="box"></div>
         <script>
@@ -54,7 +54,17 @@
                 "height: " + height + "px; width: " + width + "px; background: " + color + ";"
             */
             // CHALLENGE 1 CODE
+
+            var bsubmit = function(){
+                var height = document.getElementById("height").value;
+                var width = document.getElementById("width").value;
+                var color = document.getElementById("color").value;
             
+                document.getElementById("box").setAttribute("style","height: " + height + "px; width: " + width + "px; background: " + color + ";")
+
+            }
+            
+
         </script>
         
         <h3>Challenges 2 &amp; 3</h3>
@@ -89,6 +99,16 @@
             */
              
              // CHALLENGES 2 & 3 CODE
+             document.getElementById("nameSubmit").onclick = function(){
+                var name = document.getElementById("firstName").value;
+
+                document.getElementById("nameArea").innerHTML += "Your name is " +name+ " and that is "+name.length+" letters long.<br>";
+                
+                for (let i = 0; i < name.length; i++) {
+                    document.getElementById("nameArea").innerHTML += name.charAt(i)+"<br>";
+                    console.log(name.charAt(i));
+                }
+             }
              
         </script>
         <hr>
