@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Template</title>
+    <meta name="description" content=""> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style></style>
+</head>
+
+<body>
+
+    <p class="para">This is a paragraph.</p>
+    <p class="redPara">This is a red paragraph.</p>
+    <p class="redPara">This is a red paragraph.</p>
+    <p class="redPara">This is a red paragraph.</p>
+
+    <script>
+        var redParas = document.getElementsByClassName("redPara"); //returns a list of elements based on class name
+        console.log(redParas.length);
+
+        for(var i = 0; i < redParas.length; i++){
+            redParas[i].style.color = "red";
+        }
+
+        var firstPara = document.querySelector(".redPara"); //returns first element matching the query
+        firstPara.style.background = "black";
+
+        var allParas = document.querySelectorAll("p"); //returns a list of all elements matching the query
+        for(var i = 0; i < allParas.length; i++){
+            allParas[i].style.background = "blue";
+            allParas[i].click = function(){
+                alert("para was clicked")
+            }
+        }
+    </script>
+</body>
+
+</html>
