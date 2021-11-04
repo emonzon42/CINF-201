@@ -112,6 +112,17 @@
         
         I would then add a click event to the summonModal and closeModal elements. When summonModal is clicked, we will remove the "hide" class from the modal variable. When closeModal is clicked, we will add the "hide" class back to the modal variable.
         */
+
+        let modal = document.getElementById("modal");
+        
+        document.getElementById("closeModal").onclick = function(){
+            modal.classList.add("hide");
+        }
+
+        document.getElementById("summonModal").onclick = function(){
+            modal.classList.remove("hide");
+        }
+
         
     </script>
     <hr>
@@ -147,7 +158,17 @@
             // output results of order
         }
         */
-        
+        document.getElementById("submitOrder").onclick = function(){
+            let name = document.getElementById("fullName").value;
+            let tacos = document.getElementById("numTacos").value;
+            let output = document.getElementById("orderOutput");
+
+            if(name == "" || tacos <= 0){
+                output.innerHTML = "Please submit valid values."
+            } else{
+                output.innerHTML = "Hi " + name+ ", you want "+ tacos+ " tacos which will cost you $"+(tacos*1.50);
+            }
+        }
 
     </script>
     
@@ -164,6 +185,19 @@
     <script>
         /* For this challenge, you will need to create a variable to represent all the list items. You'll then have to loop through that list/array of items. In the loop, you'll add an onclick function to each list item. Inside of this function, you'll add code to change the background color of the li tag that was clicked. You can do this with many methods, but classList.toggle might be the easiest.
         */
+
+        var list = document.querySelectorAll(".list li");
+        
+        console.log(list.length);
+        for(var i = 0; i < list.length; i++){
+            list[i].onclick = function(){
+                if(this.classList.contains("yellow")){
+                    this.classList.remove("yellow");
+                } else{
+                    this.classList.add("yellow");
+                }
+            } 
+        }
         
     </script>
 </body>
