@@ -104,8 +104,10 @@
 
                 document.getElementById("nameArea").innerHTML += "Your name is " +name+ " and that is "+name.length+" letters long.<br>";
                 
+                var namegrow = "";
                 for (let i = 0; i < name.length; i++) {
-                    document.getElementById("nameArea").innerHTML += name.charAt(i)+"<br>";
+                    namegrow = namegrow + name.charAt(i);
+                    document.getElementById("nameArea").innerHTML += namegrow+"<br>";
                     console.log(name.charAt(i));
                 }
              }
@@ -126,6 +128,11 @@
             
             // CHALLENGE 4 CODE
             
+            var animals = ["cat","dog","wolf", "cow"]
+            
+            for (let i = 0; i < animals.length; i++) {
+                document.getElementById("animalList").innerHTML += "<li>"+animals[i]+"</li>";
+            }
         </script>
         
         <h3>Challenge 5</h3>
@@ -146,6 +153,16 @@
             "The volume of your box is 27000" */
             
             // CHALLENGE 5 CODE
+
+            document.getElementById("submitDimensions").onclick = function(){
+                var width = document.getElementById("boxWidth").value;
+                var length = document.getElementById("boxLength").value;
+                var height = document.getElementById("boxHeight").value;
+                let volume = width*length*height;
+
+                document.getElementById("boxInfo").innerHTML = "The volume of your box is "+ volume;
+            }
+
             
         </script>
         
@@ -166,7 +183,16 @@
             */
             
             // CHALLENGE 6 CODE
-        
+            document.getElementById("toggleDiv").onclick = function(){
+                var div = document.getElementById("togglingDiv");
+                if (div.style.display == "block" || div.style.display == "") {
+                    div.style.display = "none";
+                } else {
+                    div.style.display = "block";
+                }
+
+            }
+             
             
         </script>
         
