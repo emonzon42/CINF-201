@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Working with the DOM</title>
+    <style>.container {max-width: 700px; margin: 0 auto;}</style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Working with the DOM</h1>
+        <p>On this page, there are a few examples which demonstrate how to use JS to manipulate elements in the DOM. This can be achieved with a few different functions that are used on the document object. The code for each example is located in the script tags directly below the HTML for that example. This is an example of internally placed JS. To view this code, right-click the page and select "View Source." There are accompanying comments to help explain what's happening in the code.</p>
+        <hr>
+
+        <h2>Selecting One Element Using its ID</h2>
+        <p>In this example, we use the getElementById() method to select <strong>one</strong> element on the page and give it some text/change its background color to lightblue. That element must have a unique id value or our code won't work.</p>
+        <p id="redPara"></p>
+        <script>
+            /* I use document.getElementById to select our element and then the .style and .innerHTML properties to change how our paragraph looks. innerHTML will strip out all content inside of the element and then replace it. The id used in our element must be unique and match the id we provide the getElementById() function or it won't work. 
+             */
+            document.getElementById("redPara").style.background = "lightblue";
+            document.getElementById("redPara").innerHTML = "This paragraph will have a lightblue background.";
+
+        </script>
+        <hr>
+
+        <h2>Selecting Elements Using a Class Name</h2>
+        <p>In this example, we use the getElementsByClassName() method to select multiple elements at once. Unlike getElementById, this method gets a collection of elements based on their class name. Collections are similar to arrays and we can get their length, loop through them, and reference individual items by their index number.</p>
+        <p>After I get the elements as a collection, I loop through them to give each one a navy background and white text. I then target one item in that collection to give it a bigger font size. </p>
+        <p class="bluePara">This paragraph will have a blue background, white text, and a bigger font size.</p>
+        <p class="bluePara">This paragraph will have a blue background and white text.</p>
+        <p class="bluePara">This paragraph will have a blue background and white text.</p>
+        <script>
+            /* I use document.getELementsByClassName to get a collection of elements with a class of bluePara (3 paragraphs). I then use a for loop to go through the collection. We can do this by starting at 0 and then going up to, but not including the length of the collection (blueParas.lenght). Just like an array, the first item has an index of 0. The first paragraph would be blueParas[0], the second paragraphs would be blueParas[1], and the last paragraph would be blueParas[2].
+                        
+            I finally use the .setAttribute method to set the style attribute of each paragraph. The first argument of setAttribute is the name of the attribute and the second argument is the value of the attribute we are creating. In this case, we set the style attribute to backround: navy; color: white;.
+                        
+                        */
+            var blueParas = document.getElementsByClassName("bluePara");
+            for (var x = 0; x < blueParas.length; x++) {
+                blueParas[x].setAttribute("style", "background: navy; color: white;");
+            }
+
+            // You can refer to an individual item in the collection like you would with an array.
+            blueParas[0].style.fontSize = "1.5em";
+
+        </script>
+
+        <hr>
+        <h2>Selecting One Element Using a CSS Selector</h2>
+        <p><strong>Example 1:</strong> In this example, we use the querySelector method to select the <strong>first element</strong> which matches the CSS selector we provide and then style it. We use it to select an input element which has a type value of "text" and give it a red border. There are two input elements which meet that criteria below but only the first one is styled. This is a powerful JS method because it allows you to select more specific elements on the page based on the querying power of CSS. </p>
+        <label for="firstInput">First Input:</label><input type="text"><br>
+        <label for="secondInput">Second Input:</label><input type="text">
+        <script>
+            /* 
+              There are two elements with an input type of text but only the first one receives the border color of red. querySelector only works on the first matched element which meets our provided CSS selector. Instead of "input[type='text']", we could have used "input" and it would have function the same. 
+            */
+            document.querySelector("input[type='text']").style.borderColor = "red";
+
+        </script>
+
+        <p><strong>Example 2:</strong> In this example, we select target the first span tag inside of a paragraph to give it a border color of black.</p>
+        <p>The first span inside of <span>this</span> paragarph will have a this <span>black</span> border around it while the second <span>and</span> third spans will not.</p>
+        <script>
+            // There are two spans in the paragaraph, but only the first one receives the border style below.
+            document.querySelector("span").style.border = "thin solid black";
+
+        </script>
+        <hr>
+
+        <h2>Selecting Multiple Elements Using a CSS Selector</h2>
+        <p>In this example, we will use the querySelectorAll method to select <strong>all </strong> elements which match the CSS selector we provide and then style them. When we use this method, it's very similar to document.getElementsByClassName. However, unlike the class name method, we can select multiple elements based on <strong>any</strong> CSS selector we provide instead of just the class name. All span tags in the paragraph below will get a green background with white text and the second span will have a larger font size.</p>
+        <p class="greenSpanPara">All of the <span>span</span> tags inside of this <span>paragraph</span> tag will recieve a green background color <span>and</span> a white font color. The second span tag will get a larger font size since I target it individually.</p>
+        <script>
+            /* We can target elements like we would in CSS using JavaScript. In my example, I target all spans inside of anything with a class of "greenSpanPara." Just like the getElementsByClassName example, I will loop through this list of elements and give them styles. The getElementsByClassName method only accepts class names as an argument but this method is more powerful and lets you target more items on the page based on any criteria.            
+            */
+            var greenSpans = document.querySelectorAll(".greenSpanPara span");
+            for (var x = 0; x < greenSpans.length; x++) {
+                greenSpans[x].setAttribute("style", "background: green; color: white;");
+            }
+            
+            // Just like in the getElementsByClassName example, we can target only one element in our list and style it. 
+            greenSpans[1].style.fontSize = "1.5em";
+        </script>
+        <hr>
+        
+        <h2>Using a Click Event</h2>
+        <p>The example below demonstrates how to use a click event on an element. We add a click event listener to a button so that when it is clicked, an alert is created.</p>
+        <button id="clickExample" type="submit">Click Event Example</button>
+        <script>
+            // We get our button with document.getElementById
+            // Afterward, we add an onclick event listener to link a function to it when it is cliecked.
+            document.getElementById("clickExample").onclick = function() {
+                alert("You clicked the click event example button.");
+            }
+        </script>
+        <hr>
+        
+        <h2>Using a Mouseover Event</h2>
+        <p>The example below demonstrates how to use a mouseover event on an element. When our sentence below is hovered over, the content inside of it will change. </p>
+        
+        <p class="hoverExample">This content will change.</p>
+        <script>
+            /* 
+                Just like the example above, we use the name of the event after we have selected the element we want to use to trigger the event. In this example, we are referring to the paragraph with querySelector(".hoverExample"). Inside of our function, the keyword "this" refers to that same paragraph we referenced for the event.
+            */
+            document.querySelector(".hoverExample").onmouseover = function () {
+                this.innerHTML = "This content has changed!";
+            }
+        </script>
+        <hr>
+        
+        <h2>Using a Keypress Event</h2>
+        <p>The example below demonstrates how to use a keypress event on an input element. As we type in the input box, it will tell us how many characters we have typed in an empty paragraph below it. </p>
+        <input class="keyPressExample" type="text">
+        <p class="keyPressOutput"></p>
+        <script>
+            /* We use onkeyup because we want the value of the user's input AFTER they type it. I refer to the input we are typing in with the "this" keyword. ".value" gets its value and ".length" gets the length of the value. I then use innerHTML to output the number of characters being typed.
+            
+            */
+            document.querySelector(".keyPressExample").onkeyup = function () {
+                var length = this.value.length;
+                document.querySelector(".keyPressOutput").innerHTML = "You have typed " +  length + " characters.";
+            }
+        </script>
+        <hr>
+        
+        <h2>"This" Keyword</h2>
+        <p>Some of the previous examples use the keyword "this" inside of the code. Depending on the context, "this" can refer to a number of things. For the purposes of this course, "this" will generally refer to the object on which an action/event occured. The example below demonstrates how to use the "this" keyword in a function. In our example, "this" refers to the button since it is the object that was clicked.</p>
+        <button type="submit" id="example">Example Button</button>
+        <script>
+            document.getElementById("example").onclick = function() {
+                this.style.color = "white";
+                this.style.backgroundColor = "red";
+            }
+        </script>
+        
+    </div>
+
+</body>
+
+</html>
