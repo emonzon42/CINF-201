@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>JQuery Examples</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1em;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JQuery Examples</h1>
+        <p>There are numerous JQuery examples on this page. To view the code, right-click the page and either View Source or Inspect Element. To see the actual ouptut, you'll need to open up the Web Tools (F12 or Inspect Element) and check the console tab. If there are ever any errors in your code, they will be present in the console tab (along with line numbers for the errors usually). </p>
+        <hr>
+
+        <h2>Example 1</h2>
+        <p>In this example, I've created a button that will produce an alert message when it is clicked.</p>
+        <button id="hello" type="button">Say Hello</button>
+        <hr>
+
+        <h2>Example 2</h2>
+        <p>This example will perform the same function as the one above but it is written a little different in the JS.</p>
+        <button id="hello2" type="button">Say Hello Again</button>
+        <hr>
+
+        <h2>Example 3</h2>
+        <p>This example will be similar to the previous ones but written in the same style as Example 2. However, we will also add another event handler on top of the original click handler. When you click the button, it will trigger one alert. When you hover over the button with your mouse and then move it outside the button boundaries, another alert will be triggered.</p>
+        <button class="clicker" type="button">Click or Hover Over Me</button>
+        <hr>
+
+        <h2>Example 4</h2>
+        <p>This example will change the HTML of the paragraph after the button is clicked. It will use the .html() method. Like innerHTML, the html() method will remove everything in the element first before adding your content. If you wanted to retain the content already prsent (+= equivalent for innerHTML), you would use the append() method instead.</p>
+        <button id="changePara" type="button">Change Paragraph Content</button>
+        <p class="para">Small sentence.</p>
+        <hr>
+
+        <h2>Example 5</h2>
+        <p>This example demonstrates the usage of the "this" keyword which refers to the element currently being worked with. When you hover over the paragraph below, the text inside of the paragraph will be changed. We can refer to it with $(this) as you'll see in the JS.</p>
+        <p id="hoverChange">Hover over me.</p>
+        <hr>
+        
+        <h2>Example 6</h2>
+        <p>In this last example, I take input from a box and use it to change the css styles of a div (exactly like the JS challenge from before). You can change multiple styles at once with the .css property. Look in the comments for more details.</p>
+        <label for="color">Type in a color:</label>
+        <input id="color"><br>
+        <button id="submitColor">Submit Color</button>
+        <div class="box"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery-example.js"></script>
+</body>
+</html>
