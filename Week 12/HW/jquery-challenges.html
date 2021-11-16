@@ -75,6 +75,11 @@
                 You should add a click event to #hideMe. You can then refer to the element
                 that is clicked with $(this) and then use the .hide() method to hide it.
             */
+            
+            $("#hideMe").click(function(){
+                $(this).hide();
+            });
+
 
             // Challenge 2
             /* 
@@ -86,6 +91,10 @@
                 the .value property in regular JavaScript.
             */
 
+            $("#inputArea").keyup(function(){
+                $(outputArea).html($(this).val());
+            });
+
             // Challenge 3
             /* 
                 You should add a click event to #boxChanger. Inside of the curly brackets, you'll use the .css() 
@@ -93,6 +102,10 @@
                 put curly brackets inside of it so you can then list your various properties/values which are
                 separated by columns. 
             */
+
+            $("#boxChanger").click(function(){
+                $(".box").css({"width":"200px","height":"200px"})
+            });
             
             // Challenge 4
             /*
@@ -100,6 +113,10 @@
                 event in Challenge 1. Inside of the function, you will target the image (.img) 
                 and then use the .fadeToggle() function to make it toggle back and forth.
             */
+
+            $("#toggleImage").click(function(){
+                $(".img").fadeToggle();
+            });
             
             // Challenge 5
             /*
@@ -111,6 +128,13 @@
                 with the variable you used to store the count. After you change the html of the button,
                 you should use "return" to return the count so it overwrites the global variable.
             */
+
+            var count = 0;
+            $("#clickCounter").click(function(){
+                count++;
+                $(this).html("I've been pressed "+count+" times!");
+                return count;
+            });
 
         });
 
