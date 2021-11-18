@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Responsive Example Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/basic-responsive-example.css">
+</head>
+
+<body>
+    <h1>Responsive/Unresponsive Examples</h1>
+    <p>Please go through the examples below for demonstrations of how pixels/percentages can affect the responsiveness of a page. </p>
+    <h2>Unresponsive Example 1</h2>
+    <p>The divs inside of the div below are unresponsive and don't work well on mobile devices. The reason for this is because I have used fixed pixel amounts for widths. When the screen size is smaller than the pixel width of a container, a horizontal bar is created to let users scroll and see the content. This is not ideal for users because it isn't an expected behavior for web pages.</p>
+    <div class="row ex1">
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed nisl viverra, porttitor velit non, facilisis leo. Quisque sagittis ullamcorper ipsum quis mollis. Nunc nec ornare orci, dictum convallis metus. Curabitur libero enim, elementum sit amet elit et, gravida pulvinar tortor. Mauris nec semper felis. Duis a porta elit, vel lacinia orci. Praesent posuere dolor ac lacus semper placerat. Aliquam scelerisque purus eget mauris fermentum suscipit. Nam consectetur orci ut congue egestas. Quisque finibus, urna quis tincidunt feugiat, orci velit vehicula mauris, sit amet molestie tellus quam ac risus. Proin sit amet nibh nisi. Pellentesque sodales dignissim dapibus. Vestibulum imperdiet convallis mollis. Nulla quis consequat diam.</p>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed nisl viverra, porttitor velit non, facilisis leo. Quisque sagittis ullamcorper ipsum quis mollis. Nunc nec ornare orci, dictum convallis metus. Curabitur libero enim, elementum sit amet elit et, gravida pulvinar tortor. Mauris nec semper felis. Duis a porta elit, vel lacinia orci. Praesent posuere dolor ac lacus semper placerat. Aliquam scelerisque purus eget mauris fermentum suscipit. Nam consectetur orci ut congue egestas. Quisque finibus, urna quis tincidunt feugiat, orci velit vehicula mauris, sit amet molestie tellus quam ac risus. Proin sit amet nibh nisi. Pellentesque sodales dignissim dapibus. Vestibulum imperdiet convallis mollis. Nulla quis consequat diam.</p>
+        </div>
+    </div>
+    
+    <hr>
+    <h2>Unresponsive Example 2</h2>
+    <p>The divs inside of the div below are partially responsive because they utilize percentages for their widths. However, since there are no media queries attached to these styles, the content will become squished on smaller screens. </p>
+    <div class="row ex2">
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed nisl viverra, porttitor velit non, facilisis leo. Quisque sagittis ullamcorper ipsum quis mollis. Nunc nec ornare orci, dictum convallis metus. Curabitur libero enim, elementum sit amet elit et, gravida pulvinar tortor. Mauris nec semper felis. Duis a porta elit, vel lacinia orci. Praesent posuere dolor ac lacus semper placerat. Aliquam scelerisque purus eget mauris fermentum suscipit. Nam consectetur orci ut congue egestas. Quisque finibus, urna quis tincidunt feugiat, orci velit vehicula mauris, sit amet molestie tellus quam ac risus. Proin sit amet nibh nisi. Pellentesque sodales dignissim dapibus. Vestibulum imperdiet convallis mollis. Nulla quis consequat diam.</p>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed nisl viverra, porttitor velit non, facilisis leo. Quisque sagittis ullamcorper ipsum quis mollis. Nunc nec ornare orci, dictum convallis metus. Curabitur libero enim, elementum sit amet elit et, gravida pulvinar tortor. Mauris nec semper felis. Duis a porta elit, vel lacinia orci. Praesent posuere dolor ac lacus semper placerat. Aliquam scelerisque purus eget mauris fermentum suscipit. Nam consectetur orci ut congue egestas. Quisque finibus, urna quis tincidunt feugiat, orci velit vehicula mauris, sit amet molestie tellus quam ac risus. Proin sit amet nibh nisi. Pellentesque sodales dignissim dapibus. Vestibulum imperdiet convallis mollis. Nulla quis consequat diam.</p>
+        </div>
+    </div>
+    <hr>
+    <h2>Responsive Example 1 (Floats)</h2>
+    <p>The elements below are responsive and initially set to 50% of their parent container. When the page is above 900px, the divs will have a blue background. Between 600px and 899px, they will have a green background. Any screen 599px or lower will display red divs but in a one-column layout. Adjust the size of your browser window horizontally to see how it changes. You can see the CSS by inspecting the page or viewing the source after right-clicking it. </p>
+    <div class="row ex3">
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed nisl viverra, porttitor velit non, facilisis leo. Quisque sagittis ullamcorper ipsum quis mollis. Nunc nec ornare orci, dictum convallis metus. Curabitur libero enim, elementum sit amet elit et, gravida pulvinar tortor. Mauris nec semper felis. Duis a porta elit, vel lacinia orci. Praesent posuere dolor ac lacus semper placerat. Aliquam scelerisque purus eget mauris fermentum suscipit. Nam consectetur orci ut congue egestas. Quisque finibus, urna quis tincidunt feugiat, orci velit vehicula mauris, sit amet molestie tellus quam ac risus. Proin sit amet nibh nisi. Pellentesque sodales dignissim dapibus. Vestibulum imperdiet convallis mollis. Nulla quis consequat diam.</p>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed nisl viverra, porttitor velit non, facilisis leo. Quisque sagittis ullamcorper ipsum quis mollis. Nunc nec ornare orci, dictum convallis metus. Curabitur libero enim, elementum sit amet elit et, gravida pulvinar tortor. Mauris nec semper felis. Duis a porta elit, vel lacinia orci. Praesent posuere dolor ac lacus semper placerat. Aliquam scelerisque purus eget mauris fermentum suscipit. Nam consectetur orci ut congue egestas. Quisque finibus, urna quis tincidunt feugiat, orci velit vehicula mauris, sit amet molestie tellus quam ac risus. Proin sit amet nibh nisi. Pellentesque sodales dignissim dapibus. Vestibulum imperdiet convallis mollis. Nulla quis consequat diam.</p>
+        </div>
+    </div>
+    <hr>
+    <h2>Responsive Example 2 (Inline-Block)</h2>
+    <p>The example below is based on inline-block which may be easier to implement than floats. However, float are fairly common in most web projects so it makes sense to learn about them as well. Keep in mind that floats and inline-block styles have their own strengths and weaknesses.</p>
+    <div class="row ex4">
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed nisl viverra, porttitor velit non, facilisis leo. Quisque sagittis ullamcorper ipsum quis mollis. Nunc nec ornare orci, dictum convallis metus. Curabitur libero enim, elementum sit amet elit et, gravida pulvinar tortor. Mauris nec semper felis. Duis a porta elit, vel lacinia orci. Praesent posuere dolor ac lacus semper placerat. Aliquam scelerisque purus eget mauris fermentum suscipit. Nam consectetur orci ut congue egestas. Quisque finibus, urna quis tincidunt feugiat, orci velit vehicula mauris, sit amet molestie tellus quam ac risus. Proin sit amet nibh nisi. Pellentesque sodales dignissim dapibus. Vestibulum imperdiet convallis mollis. Nulla quis consequat diam.</p>
+        </div><div> <!-- I place these divs together because when you place items in display: inline-block, white space is actually considered in the layout which may be uninteneded. One way around this is by placing the elements directly next to each other. -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed nisl viverra, porttitor velit non, facilisis leo. Quisque sagittis ullamcorper ipsum quis mollis. Nunc nec ornare orci, dictum convallis metus. Curabitur libero enim, elementum sit amet elit et, gravida pulvinar tortor. Mauris nec semper felis. Duis a porta elit, vel lacinia orci. Praesent posuere dolor ac lacus semper placerat. Aliquam scelerisque purus eget mauris fermentum suscipit. Nam consectetur orci ut congue egestas. Quisque finibus, urna quis tincidunt feugiat, orci velit vehicula mauris, sit amet molestie tellus quam ac risus. Proin sit amet nibh nisi. Pellentesque sodales dignissim dapibus. Vestibulum imperdiet convallis mollis. Nulla quis consequat diam.</p>
+        </div><div> <!-- I place these divs together because when you place items in display: inline-block, white space is actually considered in the layout which may be uninteneded. One way around this is by placing the elements directly next to each other. -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed nisl viverra, porttitor velit non, facilisis leo. Quisque sagittis ullamcorper ipsum quis mollis. Nunc nec ornare orci, dictum convallis metus. Curabitur libero enim, elementum sit amet elit et, gravida pulvinar tortor. Mauris nec semper felis. Duis a porta elit, vel lacinia orci. Praesent posuere dolor ac lacus semper placerat. Aliquam scelerisque purus eget mauris fermentum suscipit. Nam consectetur orci ut congue egestas. Quisque finibus, urna quis tincidunt feugiat, orci velit vehicula mauris, sit amet molestie tellus quam ac risus. Proin sit amet nibh nisi. Pellentesque sodales dignissim dapibus. Vestibulum imperdiet convallis mollis. Nulla quis consequat diam.</p>
+        </div>
+    </div>
+</body>
+
+</html>

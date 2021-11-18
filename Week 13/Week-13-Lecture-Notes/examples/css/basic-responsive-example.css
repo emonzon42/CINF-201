@@ -1,0 +1,94 @@
+/* General utility code */
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    width:100%;
+    margin-bottom: 100px;
+}
+
+.row:after,
+.row:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+.row div {
+    padding: 10px;
+}
+
+/* Unresponsive Example 1
+Each div inside of our ex1 div has an initial width of 600px.
+Without media queries or percentage-based widths, our content
+will move to the next line when there isn't enough space for both 
+divs which may not be intended behavior. Using percentages helps 
+keep a fluid layout but if you don't change the layout at certain 
+widths, content will become squished. */
+.ex1 div {
+    border: 2px solid black;
+    width: 600px;
+    float: left;
+}
+
+/* Unresponsive Example 2 
+The divs inside of ex2 have an intial width of 50. However, we 
+won't use media queries on them so you can see how they would
+look on smaller screeens. Content ends up being squished together. */
+
+.ex2 div {
+    border: 2px solid black;
+    width: 50%;
+    float: left;
+}
+
+/* Responsive Example 1
+Each div inside of our ex3 div has an initial width of 50%.
+Once our page is smaller than 600px, they get a width of 100%.
+Max-width is like saying "up until this maximum width, apply these styles."
+Min-width is "from this minimum size and onward, apply these styles."
+Using min-width and max-width is "between these widths, apply these styles."
+*/
+.ex3 div {
+    border: 2px solid black;
+    width: 50%;
+    float: left;
+    color: white;
+}
+@media(min-width: 900px) {
+    .ex3 div {
+        background: blue;
+        
+    }
+}
+@media(min-width: 600px) and (max-width: 899px) {
+    .ex3 div {
+        background: green;
+    }
+}
+@media(max-width: 599px) {
+    .ex3 div {
+        background: red;
+        float: none;
+        width: 100%;
+        /* You can omit float: none; and the page will look like one column. 
+        However, I would recommend changing the float as well in your media query. */
+    }
+}
+
+/* Responsive Example 2
+Each div inside of ex4 is set to display: inline-block so they can appear side by side. 
+We can then adjust widths and other things without having to worry about clearing floats. 
+To make it responsive, we change the style from display: inline-block; to display: block;
+and change the width to 100% */
+.ex4 div {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.66%;
+}
+@media(max-width: 700px) {
+    .ex4 div {
+        display: block;
+        width: 100%;
+    }
+}
