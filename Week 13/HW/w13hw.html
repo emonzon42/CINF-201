@@ -7,11 +7,86 @@
     <title>HTML Template</title>
     <meta name="description" content=""> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style></style>
+    <style>
+        .one{
+            color:white;
+            background-color: yellowgreen;
+            padding: 3em;
+        }
+        .two,.three,.four,.five,.six{
+            display: none;
+        }
+        @media(max-width:1200px){
+            .one{
+                color:white;
+                background-color: salmon;
+            }
+            .two{
+                display: block;
+            }
+        }
+        @media(max-width:1000px){
+            .one{
+                color:black;
+                background-color: blanchedalmond;
+            }
+            .three{
+                display: block;
+                
+            }
+
+        }
+        @media(max-width:780px){
+            .one{
+                color:orangered;
+                background-color: skyblue;
+            }
+            .four{
+                display: block;
+            }
+        }
+        @media(max-width:600px){
+            .one{
+                color:white;
+                background-color: blueviolet;
+            }
+            .five{
+                display: block;
+            }
+        }
+        @media(max-width:400px){
+            .one{
+                color:black;
+                background-color: mediumspringgreen;
+            }
+            .six{
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
     
+    <div class="one">
+        I am 21 years old
+        <div class="two">
+            My favorite colors are yellow and mint green
+            <div class="three">
+                I like food
+                <div class="four">
+                    Money
+                    <div class="five">
+                        idk what else to write
+                        <div class="six">
+                            1234567890
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         
