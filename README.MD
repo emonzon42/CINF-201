@@ -3,7 +3,8 @@ My assignments/etc from my college web development class
 
 ## Final Project:
 
-#### [Web Portfolio](http://github.com/emonzon42/WebPortfolio "FinalProject!")
+#### [Website](https://www.albany.edu/~em421433/CINF%20201/FinalProject/html/homepage.html "FinalProject!")
+#### [Repo](http://github.com/emonzon42/WebPortfolio "FinalProject!")
 
 # Contact Me
 If you're interested getting in touch in regards to business/collaborations 
